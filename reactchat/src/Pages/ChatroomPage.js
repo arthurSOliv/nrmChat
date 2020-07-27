@@ -1,13 +1,20 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import makeToast from "../Toaster";
 
 const ChatPage = ({ match, socket }) => {
   const chatroomId = match.params.id;
+  const chatroomName = match.params.name;
   const [messages, setMessages] = React.useState([]);
   const messageRef = React.useRef();
   const [userId, setUserId] = React.useState("");
 
   const sendMessage = () => {
+    const message = messageRef.current.value;
+    if(message.startsWith("/stock=")){
+      messageRef.current.value = "";
+      return;
+    }
     if (socket) {
       socket.emit("chatroomMessage", {
         chatroomId,
@@ -45,6 +52,10 @@ const ChatPage = ({ match, socket }) => {
         chatroomId: chatroomId
       });
 
+      socket.on("bot add", (message) => {
+        makeToast("success", "Bot connected");
+      });
+
       socket.on("newMessage", (message) => {
         setMessages([...messages, message]);
       });
@@ -63,7 +74,7 @@ const ChatPage = ({ match, socket }) => {
   return (
     <div className="chatroomPage">
       <div className="chatroomSection">
-        <div className="cardHeader">Chat NAme</div>
+        <div className="cardHeader">{chatroomName}</div>
         <div className="chatroomContent">
           {messages.map((message, i) => (
             <div key={i} className="message">

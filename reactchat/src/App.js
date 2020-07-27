@@ -54,7 +54,7 @@ function App() {
           exact
         />
         <Route
-          path="/chat/:id"
+          path="/chat/:id/:name"
           render={() => <ChatPage socket={socket} />}
           exact
         />
