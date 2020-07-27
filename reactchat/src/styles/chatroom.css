@@ -11,7 +11,7 @@
   width: 40vw;
   height: 80vh;
   margin: auto;
-  border: 1px solid #eee;
+  border: 5px solid #333;
   position: relative;
 }
 
@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: 1fr 72px;
   grid-gap: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #333;
 }
 
 .chatroomActions button {
@@ -43,14 +43,15 @@
 
 .message {
   margin-bottom: 0.25rem;
+  font-weight: bold;
 }
 
 .otherMessage {
-  color: #0099cc;
+  color: #CC8714;
   font-weight: bold;
 }
 
 .ownMessage {
-  color: #00cc00;
+  color: #6B4C7F;
   font-weight: bold;
 }
