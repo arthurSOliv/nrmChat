@@ -27,6 +27,11 @@ const ChatPage = ({ match, socket }) => {
     if(socket){
       socket.on("newMessage", (message) => {
         const newMessages = [...messages, message];
+
+        if(newMessages.length > 50){
+          newMessages.shift();
+        }
+
         setMessages(newMessages);
       });
     }
