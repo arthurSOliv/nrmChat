@@ -14,7 +14,7 @@ function App() {
   const setupSocket = () => {
     const token = localStorage.getItem("CC_Token");
     if(token && !socket){
-      const newSocket = io("http://localhost:3000", {
+      const newSocket = io("http://localhost:3333", {
         query: {
           token: localStorage.getItem("CC_Token"),
         },
@@ -22,7 +22,7 @@ function App() {
 
       newSocket.on("disconnect", () => {
         setSocket(null);
-        setTimeout(setupSocket, 3000);
+        setTimeout(setupSocket, 3333);
         makeToast("Error", "Socket Disconnected");
       });
 

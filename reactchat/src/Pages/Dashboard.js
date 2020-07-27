@@ -2,11 +2,11 @@ import React from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const DashboardPage = () => {
+const DashboardPage = (props) => {
   const [chats, setChats] = React.useState([]);
 
   const getChats = () => {
-    axios.get("http://localhost:3000/chatroom", {
+    axios.get("http://localhost:3333/chatroom", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("CC_Token"),
       },

@@ -10,7 +10,7 @@ const RegisterPage = (props) => {
     const username = usernameRef.current.value;
     const password = passwordRef.current.value;
 
-    axios.post("http://localhost:3000/user/register", {
+    axios.post("http://localhost:3333/user/register", {
       username,
       password,
     }).then(response => {
