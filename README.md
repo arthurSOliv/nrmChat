@@ -2,6 +2,8 @@
 
 A Real Time Chat using NodeJS, ReactJS and MongoDB challenge
 
+- [ ] Register and Login
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
