@@ -10,7 +10,7 @@ A Real Time Chat using NodeJS, ReactJS and MongoDB challenge
 (https://stooq.com/q/l/?s=aapl.us&f=sd2t2ohlcv&h&e=csv, here aapl.us is the
 stock_code)
 - [ ] Recieve CSV
-- [ ] Show only last 50 messages
+- [x] Show only last 50 messages
 
 ```
 
