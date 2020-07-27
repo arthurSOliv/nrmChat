@@ -26,10 +26,11 @@ Clone this repo
 cd nodejsChat
 yarn install
 yarn start (Back End will be running on PORT 3333);
-
-## Fronted
+```
 
 ```
+## Fronted
+
 cd reactchat
 yarn install
 yarn start (Front End will be hosted in the PORT 3000);
