@@ -2,7 +2,17 @@
 
 A Real Time Chat using NodeJS, ReactJS and MongoDB challenge
 
-- [ ] Register and Login
+```
+
+- [x] Register and Login
+- [x] Post messages
+- [ ] Create a decoupled bot that will call an API using the stock_code as a parameter
+(https://stooq.com/q/l/?s=aapl.us&f=sd2t2ohlcv&h&e=csv, here aapl.us is the
+stock_code)
+- [ ] Recieve CSV
+- [ ] Show only last 50 messages
+
+```
 
 ## Getting Started
 
