@@ -2,6 +2,8 @@
 
 A Real Time Chat using NodeJS, ReactJS and MongoDB challenge
 
+OBS: STILL TRYING TO CREATE THE DECOUPLED BOT
+
 ```
 ## Tasks
 - [x] Register and Login
