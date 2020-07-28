@@ -1,20 +1,20 @@
-const request = require("request");
-const io = require("socket.io-client");
-
 const app = require('./app');
 
 const server = app.listen(3334, ()=>{
     console.log("Server started on port 3334");
   });
 
-const socket = io("http://localhost:3333");
+const io = require('socket.io-client');
 
-socket.on("disconnect", () => {
-    console.log('Bot Disconnected');
+const botSocket = io.connect("ws://localhost:3333/", {
+    reconnection: true
 });
 
-socket.on("connected", (socket) => {
-    console.log('Bot Connected' + socket);
-})
 
-socket.emit("bot add");
+botSocket.on('connect', function () {
+  console.log('connected to localhost:3333');
+});
+
+console.log(botSocket);
+
+botSocket.emit("bot add");

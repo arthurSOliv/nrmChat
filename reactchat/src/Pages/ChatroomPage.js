@@ -52,7 +52,8 @@ const ChatPage = ({ match, socket }) => {
         chatroomId: chatroomId
       });
 
-      socket.on("bot add", (message) => {
+      socket.on("bot add", () => {
+        console.log("fasfa")
         makeToast("success", "Bot connected");
       });
 
